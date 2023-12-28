@@ -1,0 +1,24 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+# Leetcode # 1448
+class Solution:
+    def goodNodes(self, root: TreeNode) -> int:
+        # a node is good if it's parents are not bigger than it 
+        good = [0]
+        def dfs(root, maxval):
+            if not root:
+                return 
+            
+            if root.val >= maxval:
+                good[0] += 1
+                maxval = root.val
+            
+            dfs(root.left, maxval)
+            dfs(root.right,maxval)
+
+        dfs(root, float("-inf"))
+        return good[0]
