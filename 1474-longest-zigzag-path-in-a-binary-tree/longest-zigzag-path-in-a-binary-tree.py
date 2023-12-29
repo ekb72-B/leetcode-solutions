@@ -7,17 +7,16 @@
 class Solution:
     def longestZigZag(self, root: Optional[TreeNode]) -> int:
         maxlength = 0
-        print('touched')
+        
         if not root :
             return 0
-        
         # recursively look into each component and direction now
         def zagger(root, isLeft, length):
             
              # access maxlength in global scope
             if not root:
                 return
-                
+
             nonlocal maxlength
             maxlength = max(maxlength, length)
             if isLeft:
