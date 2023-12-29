@@ -10,7 +10,7 @@ class Solution:
         for i in s:
             if i != '*':
                 res += i
-            elif i == '*':
+            else:
                 res = res[:-1]
         return res
 
