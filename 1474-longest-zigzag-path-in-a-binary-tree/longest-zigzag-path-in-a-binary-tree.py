@@ -14,10 +14,11 @@ class Solution:
         # recursively look into each component and direction now
         def zagger(root, isLeft, length):
             
-            nonlocal maxlength # access maxlength in global scope
+             # access maxlength in global scope
             if not root:
                 return
                 
+            nonlocal maxlength
             maxlength = max(maxlength, length)
             if isLeft:
                 zagger (root.right, False, length+1)
