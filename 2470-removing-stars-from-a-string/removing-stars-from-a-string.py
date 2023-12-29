@@ -11,7 +11,7 @@ class Solution:
             if i != '*':
                 res += i
             elif i == '*':
-                res = res[:len(res)-1]
+                res = res[:-1]
         return res
 
         
