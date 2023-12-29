@@ -12,7 +12,6 @@ class Solution:
             return 0
         # recursively look into each component and direction now
         def zagger(root, isLeft, length):
-            
              # access maxlength in global scope
             if not root:
                 return
