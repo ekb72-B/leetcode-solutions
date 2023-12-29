@@ -6,12 +6,12 @@ class Solution:
 
         # iterate, when you see a star, remove the item that preceded it
         # append values into result array bit if you see a star, then remove the last item of the result array and skip the star as well
-        res = ''
+        res = []
         for i in s:
             if i != '*':
-                res += i
+                res.append(i)
             else:
-                res = res[:-1]
-        return res
+                res.pop()
+        return ''.join(res)
 
         
