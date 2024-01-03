@@ -8,7 +8,7 @@ class Solution:
         if len(s) > len(t):
             return False
         
-        if (len(s) < 1 and len(t) < 1) or (len(s) <1 and len(t)>1):
+        if (len(s) < 1 or len(t) < 1) :
             return True
 
         while i < len(s) and j < len(t):
