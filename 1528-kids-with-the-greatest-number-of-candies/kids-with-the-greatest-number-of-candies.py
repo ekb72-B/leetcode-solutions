@@ -6,7 +6,6 @@ class Solution:
     
         '''
         maxvar = max(candies)
-        print(maxvar)
         res = []
 
         for i in candies:
