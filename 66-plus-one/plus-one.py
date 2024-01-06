@@ -3,13 +3,12 @@ class Solution:
         arr = []
         digs = ''
 
-        for dig in digits:
-            digs += str(dig)
 
-        res = int(digs) + 1
-        # result is an int. turn back to string/ back to array
+        for i in range(len(digits)-1, -1, -1):
+            if digits[i] == 9:
+                digits[i] = 0
+            else:
+                digits[i] += 1
+                return digits
 
-        for char in str(res):
-            arr.append(int(char))
-
-        return arr
+        return [1]+digits
