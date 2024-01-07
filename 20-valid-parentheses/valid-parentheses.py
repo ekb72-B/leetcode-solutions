@@ -4,16 +4,16 @@ class Solution:
         # use one stack 
 
         sstack = []
-        brackdic = {
+        brackdict = {
             '(': ')', 
             '{' : '}', 
             '[' : ']'
         }
 
         for bracket in s:
-            if bracket in brackdic:
+            if bracket in brackdict:
                 sstack.append(bracket)
-            elif len(sstack) == 0 or bracket != brackdic[sstack.pop()]:
+            elif len(sstack) == 0 or bracket != brackdict[sstack.pop()]:
                 return False
 
         return len(sstack) == 0
