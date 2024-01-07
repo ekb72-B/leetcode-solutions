@@ -7,7 +7,7 @@ class Solution:
             else:
                 arrdict[i] = 1
 
-        if len(set(arrdict.values())) < len(arrdict):
+        if len(set(arrdict.values())) != len(arrdict):
             return False
             
         return True 
