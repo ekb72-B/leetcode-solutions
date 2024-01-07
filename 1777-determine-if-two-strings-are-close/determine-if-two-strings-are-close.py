@@ -4,7 +4,7 @@ class Solution:
         if len(word1) != len(word2):
             return False
 
-        if set(word1) == set(word2) and sorted(list(self.dictify(word1).values())) == sorted(list(self.dictify(word2).values())):
+        if set(word1) == set(word2) and sorted(list(Counter(word1).values())) == sorted(list(Counter(word2).values())):
             return True
             
         return False
