@@ -9,14 +9,6 @@ class Solution:
             return True
             
         return False
-
-    def dictcheck(self, dict1,dict2):
-        for i in dict1:
-            if i not in dict2:
-                return False
-            else:
-                return dict1[i] == dict2[i]
-
     
     def dictify(self, word):
         wdict = {}
