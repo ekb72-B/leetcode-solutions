@@ -9,25 +9,25 @@ class Solution:
         use two pointers and only move right when you add a value
         
         '''
-        curr = dummy = ListNode()
+        res = curr = ListNode()
 
         while list1 and list2:
             if list1.val < list2.val:
                 curr.next = list1
-                curr = list1
+                list1 = list1.next 
+            else:
+                curr.next = list2
+                list2 = list2.next
+            curr = curr.next 
+
+        if list1 or list2:
+            if list1:
+                curr.next = list1
                 list1 = list1.next
             else:
                 curr.next = list2
-                curr = list2
                 list2 = list2.next
-                
-        if list1 or list2:
-            if list1 :
-                curr.next = list1
-            elif list2:
-                curr.next = list2
-        return dummy.next
-
+        return res.next 
 
 
         
