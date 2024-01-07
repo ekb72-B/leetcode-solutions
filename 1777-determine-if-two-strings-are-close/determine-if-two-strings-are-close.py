@@ -3,8 +3,7 @@ class Solution:
         # if their lengths are the same and their sets are the same 
         if len(word1) != len(word2):
             return False
-        
-        print (Counter(word1))
+
         if set(word1) == set(word2) and sorted(list(self.dictify(word1).values())) == sorted(list(self.dictify(word2).values())):
             return True
             
