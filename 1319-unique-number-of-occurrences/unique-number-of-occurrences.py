@@ -7,7 +7,6 @@ class Solution:
             else:
                 arrdict[i] = 1
 
-        for key,values in enumerate(arrdict):
-            if len(set(arrdict.values())) < len(arrdict):
-                return False
+        if len(set(arrdict.values())) < len(arrdict):
+            return False
         return True 
