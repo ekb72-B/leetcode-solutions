@@ -9,4 +9,5 @@ class Solution:
 
         if len(set(arrdict.values())) < len(arrdict):
             return False
+            
         return True 
