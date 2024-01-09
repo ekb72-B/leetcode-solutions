@@ -19,11 +19,11 @@ class Solution:
                 res += s[i]
                 ctr += 1
 
-        # if res:
-        #     if res[0] == '-':
-        #         res = res[1:][::-1]
+        if res:
+            if res[0] == '-':
+                res = res[1:]
 
-        return res[1:][::-1]
+        return res[::-1]
         # starting from the back, add - when you see x number of items
 
             
