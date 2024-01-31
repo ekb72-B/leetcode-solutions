@@ -14,4 +14,4 @@ class Solution:
                 return False
 
             return mirror(left.left, right.right) and mirror(left.right, right.left)
-        return mirror(root,root)
+        return mirror(root.left,root.right)
