@@ -17,14 +17,9 @@ class Solution:
         '''
         for i in range(minlen):
             for st in strs:
-                print('here', st, strs[0][i], st[i])
                 val = strs[0][i]
                 if st[i] != val:
                     return st[:i]
-                else:
-                    continue
-
-        
         return st[:i+1]
         
 
