@@ -1,12 +1,17 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        # binary search?
-        start = 0
-        end = len(nums)-1
-        mid = start + end //2
-        nums = sorted(nums)
+        mval , count = None, 0
 
+        for num in nums:
+            if count == 0:
+                mval = num
+                count += 1
+            else:
+                if num == mval:
+                    count += 1
+                else:
+                    count -= 1
         
-        return nums[mid]
+        return mval 
 
         
