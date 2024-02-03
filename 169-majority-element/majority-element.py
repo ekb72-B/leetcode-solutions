@@ -6,7 +6,7 @@ class Solution:
         mid = start + end //2
         nums = sorted(nums)
 
-        while mid < len(nums):
-            return nums[mid]
+        
+        return nums[mid]
 
         
