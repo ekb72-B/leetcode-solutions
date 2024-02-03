@@ -1,5 +1,6 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
+        # simple boyer-moore voting algorithm
         mval , count = None, 0
 
         for num in nums:
