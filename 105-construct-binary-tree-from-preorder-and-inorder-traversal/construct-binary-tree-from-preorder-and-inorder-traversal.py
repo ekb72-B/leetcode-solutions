@@ -7,12 +7,12 @@
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
         # the first value in preorder is the root. 
-        if not preorder or not inorder:
+        if not preorder:
             return None
 
         val = preorder[0]
         root = TreeNode(preorder[0])
-        pos = inorder.index(val)
+        pos = inorder.index(preorder[0])
 
         root.left = self.buildTree(preorder[1:pos+1], inorder[:pos])
         root.right = self.buildTree(preorder[pos+1:], inorder[pos+1:])
