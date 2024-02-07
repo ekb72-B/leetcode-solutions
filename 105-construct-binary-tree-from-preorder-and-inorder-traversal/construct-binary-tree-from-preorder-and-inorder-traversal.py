@@ -10,7 +10,6 @@ class Solution:
         if not preorder:
             return None
 
-        val = preorder[0]
         root = TreeNode(preorder[0])
         pos = inorder.index(preorder[0])
 
