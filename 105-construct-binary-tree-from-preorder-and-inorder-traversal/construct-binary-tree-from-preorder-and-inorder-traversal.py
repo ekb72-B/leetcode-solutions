@@ -13,6 +13,6 @@ class Solution:
         root = TreeNode(preorder[0])
         pos = inorder.index(preorder[0])
 
-        root.left = self.buildTree(preorder[1:pos+1], inorder[:pos])
+        root.left = self.buildTree(preorder[1:pos+1], inorder[:pos+1])
         root.right = self.buildTree(preorder[pos+1:], inorder[pos+1:])
         return root
