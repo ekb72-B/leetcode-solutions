@@ -12,8 +12,8 @@ class Solution:
         """
         l1end, l2end, lindx = m -1, n-1 , m+n -1
 
-        while l2end >= 0:
-            if l1end >=0 and nums1[l1end] > nums2[l2end]:
+        while l2end >= 0 and l1end >= 0:
+            if nums1[l1end] > nums2[l2end]:
                 nums1[lindx] = nums1[l1end]
                 l1end -= 1
 
@@ -21,4 +21,9 @@ class Solution:
                 nums1[lindx] = nums2[l2end]
                 l2end -= 1
 
+            lindx -= 1
+
+        while l2end >= 0:
+            nums1[lindx] = nums2[l2end]
+            l2end -=1 
             lindx -= 1
