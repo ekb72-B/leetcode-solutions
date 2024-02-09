@@ -3,7 +3,6 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        nend = len(nums)-1
         nk = k
 
         if len(nums) == 0:
