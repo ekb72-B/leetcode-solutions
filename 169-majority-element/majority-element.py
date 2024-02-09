@@ -6,7 +6,7 @@ class Solution:
         for num in nums:
             if count == 0:
                 mval = num
-            
+                
             if num == mval:
                 count += 1
             else:
