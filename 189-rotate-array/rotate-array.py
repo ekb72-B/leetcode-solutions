@@ -12,9 +12,7 @@ class Solution:
         if k == 0:
             return nums
   
-        while nk > 0:
-            nend -= 1
-            nk -= 1
+        if nk > 0:
             mk = k % len(nums)
         
         nums[:] = nums[-mk:] + nums[:-mk] 
