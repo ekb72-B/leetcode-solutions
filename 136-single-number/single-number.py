@@ -1,9 +1,16 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         # using xor 
-        
-        res = 0
-        for i in nums:
-            res ^= i
+        ctr = 0
+        val = 0
+        n = sorted(nums)
+
+        for i in n:
+            if ctr == 0:
+                val = i
+                ctr += 1
             
-        return res
+            elif i == val:
+                ctr = 0
+
+        return val
