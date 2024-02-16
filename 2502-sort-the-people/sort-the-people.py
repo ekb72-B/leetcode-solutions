@@ -10,6 +10,4 @@ class Solution:
         
         for i in hs:
             res.append(nhdict[i])
-
- 
         return res
