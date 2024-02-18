@@ -6,8 +6,7 @@
 #         self.right = right
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
-        # add to queue if it is the right only. if there is only a left
-        # then add its right child, if both only right
+        
         """
         Notes: Using a level length variable, you can know that you've seen the last of a level.
         This is good because you can do regular iterative bfs but only return a result of
