@@ -1,14 +1,11 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        sdict = {}
+        smap = []
+        tmap = []
 
-        for i in range(len(s)):
-            if s[i] not in sdict:
-                sdict[s[i]] = t[i]
-        
-            keys = set([k for k, v in sdict.items()])
-            vals = set([v for k, v in sdict.items()])
+        for i in s:
+            smap.append(s.index(i))
+        for i in t:
+            tmap.append(t.index(i))
 
-            if t[i] != sdict[s[i]] or len(keys) != len(vals) :
-                return False
-        return True
+        return smap == tmap
