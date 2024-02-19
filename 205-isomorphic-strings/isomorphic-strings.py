@@ -6,9 +6,9 @@ class Solution:
             if s[i] not in sdict:
                 sdict[s[i]] = t[i]
         
-            keys = [k for k, v in sdict.items()]
-            vals = [v for k, v in sdict.items()]
+            keys = set([k for k, v in sdict.items()])
+            vals = set([v for k, v in sdict.items()])
 
-            if t[i] != sdict[s[i]] or len(set(keys)) != len(set(vals)) :
+            if t[i] != sdict[s[i]] or len(keys) != len(vals) :
                 return False
         return True
