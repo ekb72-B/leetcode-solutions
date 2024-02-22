@@ -11,7 +11,6 @@ class Solution:
 
             seen.add(n)
             n = self.squareNum(n)
-
             
         return False
 
