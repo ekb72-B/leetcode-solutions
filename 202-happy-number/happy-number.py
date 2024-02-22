@@ -3,11 +3,13 @@ class Solution:
         seen = set()
 
         while n not in seen:
+            if n == 1:
+                return True 
+                
             seen.add(n)
             n = self.squareNum(n)
 
-            if n == 1:
-                return True 
+            
         return False
 
     def squareNum(self, n):
