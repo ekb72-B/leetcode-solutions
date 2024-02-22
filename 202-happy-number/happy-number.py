@@ -2,10 +2,13 @@ class Solution:
     def isHappy(self, n: int) -> bool:
         seen = set()
 
+        if n == 1:
+            return True
+
         while n not in seen:
             if n == 1:
                 return True 
-                
+
             seen.add(n)
             n = self.squareNum(n)
 
