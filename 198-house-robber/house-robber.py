@@ -9,6 +9,6 @@ class Solution:
 
         for i in range(2, len(nums)):
             dp[i] = max(dp[i-2] + nums[i], dp[i-1])
-            highest = max(highest, dp[i])
+          
 
-        return highest
+        return dp[-1]
