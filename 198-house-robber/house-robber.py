@@ -8,9 +8,7 @@ class Solution:
         highest = float("-inf")
 
         for i in range(2, len(nums)):
-            print(i, dp, nums[i])
             dp[i] = max(dp[i-2] + nums[i], dp[i-1])
             highest = max(highest, dp[i])
-            print(i, dp)
 
         return highest
