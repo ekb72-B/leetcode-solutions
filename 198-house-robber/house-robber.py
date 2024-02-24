@@ -4,7 +4,6 @@ class Solution:
             return max(nums)
 
         dp = [0] * len(nums)
-
         dp[0], dp[1] = nums[0], max(nums[0], nums[1])
         highest = float("-inf")
 
