@@ -8,5 +8,6 @@ class Solution:
         for i in range(lim):
             if i not in nums:
                 res = i
+                break
 
         return res if res >= 0 else len(nums)
