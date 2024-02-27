@@ -1,13 +1,13 @@
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
-        # based on the length, if u see a val in the range then whatev if not rhen return it
+        #generate an array of len nums and return value that is not there
+        v = {}
 
-        lim = len(nums)
-        
-        res = float("-inf")
-        for i in range(lim):
-            if i not in nums:
-                res = i
-                break
+        for num in nums:
+            v[num] = num
 
-        return res if res >= 0 else len(nums)
+        for i in range(len(v)):
+            if i not in v:
+                return i
+
+        return 0 if 0 not in v else len(nums)
