@@ -5,8 +5,6 @@ class Solution:
         for j in jewels:
             if j not in jdict:
                 jdict[j] = 1
-            else:
-                continue
     
         for s in stones:
             if s in jdict:
