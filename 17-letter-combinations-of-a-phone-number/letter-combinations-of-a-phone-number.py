@@ -16,13 +16,9 @@ class Solution:
 
         for digit in digits:
             temp = []
-            print(digit, temp)
             for letter in letterdict[digit]:
-                print( letter, result , "here")
                 for res in result:
-                    print(res, "res")
                     temp.append(res + letter)
-                    print(temp, "temp")
             result = temp
        
         return result
