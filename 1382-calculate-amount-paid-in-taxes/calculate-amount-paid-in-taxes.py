@@ -14,8 +14,6 @@ class Solution:
             curr = min(income,i[0]) - already 
             already += curr
             taxable -= already
-        
-            print(curr, i[1], already, taxable, "taxable")
             res += (curr * (i[1]/100))
         
         return res
