@@ -1,21 +1,15 @@
-class Solution(object):
-    def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
         numdict = {}
-
-        for index,value in enumerate(nums):
-            diff = target - value
+        
+        for i in range(len(nums)):
+            diff = target - nums[i]
             if diff in numdict:
-                return [index, numdict[diff]]
-            else:
-                numdict[value] = index
-
-
-
+                return [numdict[diff], i]
+            numdict[nums[i]] = i
+    
+        return []
         
+            
 
-        
+               
