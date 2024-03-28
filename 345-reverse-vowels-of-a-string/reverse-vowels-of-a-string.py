@@ -24,4 +24,5 @@ class Solution:
             
         for i in sarr:
             res += i
+        
         return res
