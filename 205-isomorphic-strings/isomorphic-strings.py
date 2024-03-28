@@ -1,11 +1,21 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        smap = []
-        tmap = []
+        if len(s) != len(t):
+            return False
 
-        for i in s:
-            smap.append(s.index(i))
-        for i in t:
-            tmap.append(t.index(i))
+        if len(set(s)) != len(set(t)):
+            return False
 
-        return smap == tmap
+        p1 = 0
+        p2 = 0
+        vdict = {}
+        tdict = {}
+        for i in range(len(s)):  
+            if s[i] not in vdict:
+                vdict[s[i]] = t[i]
+            if t[i] not in tdict:
+                tdict[t[i]] = s[i]
+            else:
+                if vdict[s[i]] != t[i] or tdict[t[i]] != s[i]:
+                    return False     
+        return True
