@@ -6,12 +6,6 @@
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         '''
-        plan :
-        1 ptr on null head. stays so it can be returned. 
-        1 ptr on 1st list to move and compare.
-        1 ptr on 2nd list to move and compare.
-        
-        if item at ptr is less, then that is next and then next moves
         
         '''
         curr = head = ListNode()
