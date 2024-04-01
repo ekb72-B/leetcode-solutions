@@ -5,10 +5,9 @@
 #         self.next = next
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        '''
-        
-        '''
         curr = head = ListNode()
+
+        # if the val is less then put that of not put other 
 
         while list1 and list2:
             if list1.val < list2.val:
@@ -19,6 +18,11 @@ class Solution:
                 curr.next = list2
                 list2 = list2.next
                 curr = curr.next
-            
-        curr.next = list1 or list2
+
+        if list1 or list2:
+            if list1 : 
+                curr.next = list1
+            else:
+                curr.next = list2
+
         return head.next
