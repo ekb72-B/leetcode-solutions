@@ -5,14 +5,14 @@ class Solution:
         p = ""
         for i in f:
             if i.isalnum():
-                p+= i
+                p+= i.lower()
 
         start = 0
         end = len(p)-1
 
         while start < end:
-            p1 = p[start].lower()
-            p2 = p[end].lower()
+            p1 = p[start]
+            p2 = p[end]
             if p1 != p2:
                 return False
 
