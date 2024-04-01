@@ -1,26 +1,22 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        '''
-        raceacar
         
-        '''
-        s1 = s.lower().strip()
-        ns = []
-        res = True
-        for char in s1:
-            if char.isalnum():
-                ns.append(char)
+        f = s.strip()
+        p = ""
+        for i in f:
+            if i.isalnum():
+                p+= i
 
-        p1 = 0
-        p2 = len(ns)-1
-        while p1 < p2:
-            if ns[p1] == ns[p2]:
-                res = True
-                p1 += 1
-                p2 -= 1
-            else:
+        start = 0
+        end = len(p)-1
+
+        while start < end:
+            p1 = p[start].lower()
+            p2 = p[end].lower()
+            if p1 != p2:
                 return False
-        return res
 
+            start += 1
+            end -= 1
 
-        
+        return True
