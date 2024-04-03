@@ -1,14 +1,12 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        # maximize the sell, minimize the buy . only keep max diff
-        minprice = float('inf')
-        profit = 0
+        maxprof = float("-inf")
+        minseen = float("inf")
 
         for price in prices:
-            if price < minprice:
-                minprice = price
+            minseen = min(price, minseen)
+            maxprof = max(maxprof, price - minseen)
 
-            elif price - minprice > profit:
-                profit = price - minprice
+        return maxprof
 
-        return profit
+       
