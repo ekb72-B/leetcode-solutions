@@ -7,15 +7,6 @@ class Solution:
         start = 0
         end = n
         mid = (start + end)//2 
-     
-        # stop condition is when you find bad version
-        
-        '''
-        [1, 2, ..., n]
-
-        [g1, g2, g3, b4, b5]
-
-        '''
         lowest = n
 
         if n <=1 :
