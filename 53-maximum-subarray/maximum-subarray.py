@@ -4,7 +4,6 @@ class Solution:
 
         for i in range(1, len(nums)):
             currmax = max(currmax + nums[i], nums[i])
-
             globalmax = max(globalmax, currmax)
-        
+
         return globalmax
