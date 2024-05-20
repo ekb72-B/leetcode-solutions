@@ -1,27 +1,38 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
-        # snums = sorted(nums)
-        res = []
-        nums.sort()
+        res = set()
 
-        for i in range(len(nums)):
-            if i > 0 and nums[i] == nums[i-1]:
-                continue
-            j = i + 1
-            k = len(nums) -1
+        n , p , z = [], [], []
 
-            while j < k:
-                total = nums[i] + nums[j] + nums[k]
+        for num in nums:
+            if num > 0:
+                p.append(num)   
+            elif num < 0:
+                n.append(num) 
+            else:
+                z.append(num) 
 
-                if total > 0:
-                    k -= 1
-                elif total < 0 :
-                    j += 1
-                else:
-                    res.append([nums[i], nums[j], nums[k]])
-                    j += 1
+        Nset, Pset = set(n), set(p)
 
-                    while nums[j] == nums[j-1] and j < k:
-                        j += 1
-            
+        if z:
+            for num in Pset:
+                if -1*num in Nset:
+                    res.add((-1*num, 0, num))
+        
+        if len(z) >= 3:
+            res.add((0,0,0))
+
+        for i in range(len(n)):
+            for j in range(i+1, len(n)):
+                target = -1*(n[i] + n[j])
+                if target in Pset:
+                    res.add(tuple(sorted([n[i], n[j],target])))
+
+        for i in range(len(p)):
+            for j in range(i+1, len(p)):
+                target = -1*(p[i] + p[j])
+                if target in Nset:
+                    res.add(tuple(sorted([p[i], p[j],target])))
+
         return res
+        
